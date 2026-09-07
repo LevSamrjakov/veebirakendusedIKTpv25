@@ -1,0 +1,105 @@
+h1{
+    font-size: x-large;
+    font-family: Impact;
+    Color: deeppink; /*Teksti värv*/
+    text-align: center;
+    background-color: darkmagenta;
+    letter-spacing: 3px;
+}
+header h1 {
+    padding: 5%;
+    background-color: darkmagenta; /*Tausta värv*/
+    font-variant: small-caps;
+}
+
+header {
+    background-color: darkmagenta;
+    background-image: url('img.png');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+footer  {
+    width: 100%;
+    padding: 15px;
+    background-color: darkmagenta;
+    color: deeppink;
+    font-variant: small-caps;
+    text-align: center;
+    border-top: 2px solid darkorchid;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+section#kast1{
+    border: 1px solid darkmagenta; /*Solid, double, dashed, dotted, groove*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    text-allign: center;
+    position: absolute;
+    left: 900px;
+    bottom: 400px;
+}
+
+section#kast2{
+    border: 1px solid darkmagenta; /*Solid, double, dashed, dotted, groove*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    text-allign: center;
+    position: absolute;
+    left: 900px;
+    top: 600px;
+}
+
+img#protosslogo{
+    border: 1px solid darkmagenta; /*Solid, double, dashed, dotted, groove*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    text-allign: center;
+}
+
+
+/****************NAV*******************/
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start; /* added */
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    color: deeppink;
+    text-decoration: none;
+    padding: 10px;
+    text-align: left; /* changed */
+    border-left: 2px solid darkorchid;
+    border-right: 2px solid darkorchid;
+    font-variant: small-caps;
+}
+nav ul li a:hover{ /*ling fookuses - hiir on peal*/
+    background-color: darkorchid;
+}
+
+nav{
+    padding: 30px;
+    margin: 5px;
+}
+
+main{
+    margin-top: 20px;
+}
