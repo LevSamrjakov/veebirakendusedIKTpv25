@@ -3,10 +3,11 @@ h1{
     font-family: Times New Roman;
     Color: deepskyblue; /*Teksti värv*/
     text-align: center;
+    background-color: lightskyblue;
 }
 header h1 {
     padding: 5%;
-    background-color: white; /*Tausta värv*/
+    background-color: goldenrod; /*Tausta värv*/
     font-variant: small-caps;
 }
 
@@ -52,7 +53,7 @@ section#kast2{
     top: 550px;
 }
 
-img{
+img#protosslogo{
     border: 1px solid goldenrod; /*Solid, double, dashed, dotted, groove*/
     width: 25%;
     margin: 5px;
@@ -60,6 +61,7 @@ img{
     border-radius: 30px 30px 30px 30px;
     text-allign: center;
 }
+
 
 /****************NAV*******************/
 nav ul{
