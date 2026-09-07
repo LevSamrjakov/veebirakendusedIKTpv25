@@ -1,0 +1,103 @@
+h1{
+    font-size: x-large;
+    font-family: Times New Roman;
+    Color: deepskyblue; /*Teksti värv*/
+    text-align: center;
+}
+header h1 {
+    padding: 5%;
+    background-color: white; /*Tausta värv*/
+    font-variant: small-caps;
+}
+
+header {
+    background-color: darkgoldenrod;
+    background-image: url('img.png');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+footer  {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    font-variant: small-caps;
+    text-align: center;
+    border-top: 2px solid goldenrod;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+section#kast1{
+    border: 1px solid goldenrod; /*Solid, double, dashed, dotted, groove*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 30px 30px 30px 30px;
+    text-allign: center;
+    position: absolute;
+    left: 700px;
+}
+
+section#kast2{
+    border: 1px solid goldenrod; /*Solid, double, dashed, dotted, groove*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 30px 30px 30px 30px;
+    text-allign: center;
+    position: absolute;
+    left: 700px;
+    top: 550px;
+}
+
+img{
+    border: 1px solid goldenrod; /*Solid, double, dashed, dotted, groove*/
+    width: 25%;
+    margin: 5px;
+    padding: 1%;
+    border-radius: 30px 30px 30px 30px;
+    text-allign: center;
+}
+
+/****************NAV*******************/
+nav ul{
+    list-style-type: none; /*täpp võtab ära*/
+    margin: 0;
+    padding: 0;
+    background-color: darkgoldenrod;
+    text-allign: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    color: deepskyblue;
+    text-decoration: none; /*alljoone on kustutatud*/
+    padding: 10px;
+    text-align: center;
+    border-left: 2px solid goldenrod;
+    border-right: 2px solid goldenrod;
+    border-radius: 20%;
+    font-variant: small-caps;
+}
+nav ul li a:hover{ /*ling fookuses - hiir on peal*/
+    background-color: lightskyblue;
+}
+
+nav{
+    padding: 30px;
+    margin: 5px;
+}
+
+main{
+    margin-top: 20px;
+}
