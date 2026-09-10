@@ -28,7 +28,17 @@ table#Keeruline2 td{
 td{
     border: 1px solid black;
 }
+table#Keeruline3{
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    border: 1px solid black;
+}
 
 .nimia{
     background-color: red;
+}
+
+.aimin{
+    background-color: blue;
 }
