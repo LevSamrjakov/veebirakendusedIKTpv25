@@ -121,8 +121,8 @@
     border: 0px solid lightgray;
 }
 
-/* USA */
-#USA{
+/* Botswana */
+#Botswana{
     width: 330px;
     height: 210px;
     border: 1px solid black;
@@ -132,6 +132,21 @@
     left: 800px;
 }
 
-#USA tr:nth-child(1) td:nth-child(1){
-    height: 175px;
+#Botswana tr:nth-child(1), tr:nth-child(5){
+    background-color: lightskyblue;
+    height: 75px;
 }
+
+#Botswana tr:nth-child(2), tr:nth-child(4){
+    background-color: white;
+    height: 10px;
+}
+
+#Botswana tr:nth-child(3){
+    background-color: black;
+}
+
+#Botswana td{
+    border: 0px solid lightgray;
+}
+
