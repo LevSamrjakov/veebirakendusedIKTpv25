@@ -49,3 +49,10 @@ table#Kodutoo{
     height: 400px;
     text-align: center;
 }
+
+table#Iseseisevtabel{
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    text-align: center;
+}
