@@ -3,72 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <title>Muusika Küsimustik</title>
+    <link rel="stylesheet" href="vormStyle.css">
 </head>
 <body>
 <h1>Muusika Küsimustik</h1>
 <div>HTML vormid ja nupud</div>
 <form action="#">
     <!-- c + tab = komentaar -->
-    <!-- Tekstkast -->
-    <label for="nimi">Nimi:</label>
-    <input type="text" id="nimi" placeholder="Lev">
-    <br>
-    <!-- ripploend või rippmenüü (en: dropdown list) -->
-    <label for="stiil">Vali meeldivaim muusikastiil:</label>
-    <br>
-    <select name="stiil" id="stiil">
-        <option value="vali">Vali...</option>
-        <option value="rock">Rock</option>
-        <option value="metal">Metal</option>
-        <option value="heavyMetal">Heavy Metal</option>
-        <option value="hardRock">Hard Rock</option>
-        <option value="neueDeutscheHärte">Neue Deutsche Härte</option>
-    </select>
-    <br>
-    <!-- radio nupud - üks valik mitmest -->
-    <strong>
-        Kuidas sa muusikat peamiselt kuulad?
-    </strong>
-    <br>
-    <input type="radio" name="platvorm" id="spotify">
-    <label for="spotify">Spotify</label>
-    <br>
-    <input type="radio" name="platvorm" id="youtubeMusic">
-    <label for="youtubeMusic">Youtube Music</label>
-    <br>
-    <input type="radio" name="platvorm" id="soundcloud">
-    <label for="soundcloud">Soundcloud</label>
-    <br>
-    <input type="radio" name="platvorm" id="raadio">
-    <label for="raadio">Raadio</label>
-    <br>
-    <input type="radio" name="platvorm" id="vinüüplaat">
-    <label for="vinüüplaat">Vinüüplaat</label>
-
-    <!-- checkbox -->
-    <fieldset>
-        <legend>Tee oma valikud - lemmik ansambel</legend>
-        <input type="checkbox" name="lemmikud" id="rollingstones">
-        <label for="rollingstones">Rolling Stones</label>
-        <br>
-        <input type="checkbox" name="lemmikud" id="judaspriest">
-        <label for="judaspriest">Judas Priest</label>
-        <br>
-        <input type="checkbox" name="lemmikud" id="manowar">
-        <label for="manowar">Manowar</label>
-        <br>
-        <input type="checkbox" name="lemmikud" id="deepPurple">
-        <label for="deepPurple">Deep Purple</label>
-        <br>
-        <input type="checkbox" name="lemmikud" id="rammstein">
-        <label for="rammstein">Rammstein</label>
-        <br>
-    </fieldset>
-    <!-- range - vahemik -->
-    <label for="tund">
-        Mitu tundi päevas sa kuulad muusikat?
-    </label>
-    0<input type="range" id="tund" min="0" max="24">24
+    <table border="1">
+        <tr>
+            <td>
+                <!-- Tekstkast -->
+                <label for="nimi">Nimi:</label>
+            </td>
+            <td>
+                <input type="text" id="nimi" placeholder="Lev">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- ripploend või rippmenüü (en: dropdown list) -->
+                <label for="stiil">Vali meeldivaim muusikastiil:</label>
+            </td>
+            <td>
+                <select name="stiil" id="stiil">
+                    <option value="vali">Vali...</option>
+                    <option value="rock">Rock</option>
+                    <option value="metal">Metal</option>
+                    <option value="heavyMetal">Heavy Metal</option>
+                    <option value="hardRock">Hard Rock</option>
+                    <option value="neueDeutscheHärte">Neue Deutsche Härte</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- radio nupud - üks valik mitmest -->
+                <strong>
+                    Kuidas sa muusikat peamiselt kuulad?
+                </strong>
+            </td>
+            <td>
+                <input type="radio" name="platvorm" id="spotify">
+                <label for="spotify">Spotify</label>
+                <br>
+                <input type="radio" name="platvorm" id="youtubeMusic">
+                <label for="youtubeMusic">Youtube Music</label>
+                <br>
+                <input type="radio" name="platvorm" id="soundcloud">
+                <label for="soundcloud">Soundcloud</label>
+                <br>
+                <input type="radio" name="platvorm" id="raadio">
+                <label for="raadio">Raadio</label>
+                <br>
+                <input type="radio" name="platvorm" id="vinüüplaat">
+                <label for="vinüüplaat">Vinüüplaat</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <!-- checkbox -->
+                <fieldset>
+                    <legend>Tee oma valikud - lemmik ansambel</legend>
+                    <input type="checkbox" name="lemmikud" id="rollingstones">
+                    <label for="rollingstones">Rolling Stones</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="judaspriest">
+                    <label for="judaspriest">Judas Priest</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="manowar">
+                    <label for="manowar">Manowar</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="deepPurple">
+                    <label for="deepPurple">Deep Purple</label>
+                    <br>
+                    <input type="checkbox" name="lemmikud" id="rammstein">
+                    <label for="rammstein">Rammstein</label>
+                    <br>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- range - vahemik -->
+                <label for="tund">
+                    Mitu tundi päevas sa kuulad muusikat?
+                </label>
+            </td>
+            <td>
+                0<input type="range" id="tund" min="0" max="24">24
+            </td>
+            <!-- Input type: color, file, email, image,  -->
+        </tr>
+        <tr>
+            <td>
+                <!-- color - värv -->
+                <label for="värv">
+                    Millist värvi sa seostad oma lemmik muusika ansambeliga?
+                </label>
+            </td>
+            <td><input type="color" id="värv"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fail">
+                    Sisesta oma lemmik laulu faili:
+                </label>
+            </td>
+            <td>
+                <input type="file" id="fail">
+            </td>
+        <tr>
+            <td>
+                <label for="hindamine">
+                    Hinda minu vormi:
+                </label>
+            </td>
+            <td>
+                <input type="number" id="hindamine" min="0" max="5">
+            </td>
+        </tr>
+        </tr>
+        <tr>
+            <td>
+                <label for="epost">E-Post:</label>
+            </td>
+            <td>
+                <input type="email" id="epost">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="pilt">
+                    Esita oma vastused:
+                </label>
+            </td>
+            <td>
+                <input type="image" id="pilt" src="img_submit.gif" alt="Submit" width="48" height="48">
+            </td>
+        </tr>
+    </table>
 </form>
 </body>
 </html>
