@@ -50,9 +50,28 @@ table#Kodutoo{
     text-align: center;
 }
 
-table#Iseseisevtabel{
+table#Iseseisevtabel1{
     width: 800px;
     height: 800px;
     border: 1px solid black;
     text-align: center;
+}
+/*Iseseisevtabel 2*/
+table#Iseseisevtabel2{
+    width: 600px;
+    height: 500px;
+    border: 1px solid deeppink;
+    text-align: center;
+}
+
+table#Iseseisevtabel2 td{
+    border: 1px solid deeppink;
+}
+
+#Iseseisevtabel2 tr:nth-child(3), #Iseseisevtabel2 tr:nth-child(4) td:nth-child(1){
+    background-color: hotpink;
+}
+
+#Iseseisevtabel2 tr:nth-child(2) td:nth-child(2), #Iseseisevtabel2 tr:nth-child(2) td:nth-child(3){
+    background-color: cyan;
 }
