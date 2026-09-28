@@ -76,6 +76,7 @@ function näitaKõike() {
     let stiil = selectValik();
     let arvamus = arvamuselugemine();
     let radiojaam = raadiojaamad();
+    let kuulanraadio = KuuladRaadio();
 
     vastusKõik.innerHTML = "Sinu nimi on: " + nimi + '<br>' +
                             'Sinu lemmikud on: ' + valik2 + '<br>' +
@@ -83,7 +84,8 @@ function näitaKõike() {
                             'Sa kuuled ' + tund + ' tundi' + '<br>' +
                             'Sa valisid ' + stiil + '<br>' +
                             'Sinu arvamus: ' + arvamus + '<br>' +
-                            'Sinu nimetatud jaamad: ' + radiojaam;
+                            'Sinu nimetatud jaamad: ' + radiojaam + '<br>' +
+                            'Kuulan raadio: ' + kuulanraadio;
 
     function puhasta() {
         Vastus1.innerHTML = "";
@@ -150,12 +152,12 @@ function KuuladRaadio() {
     let valik3 = "";
     if (kuulanRadio.checked) {
         valik3 = kuulanRadio.value
-    } else if (kuulanRadio.checked) {
+    } else if (eiKuulanRadio.checked) {
         valik3 = eiKuulanRadio.value
     } else {
         "Palun tee oma valik"
     }
 
-    Vastus8.innerHTML = "Kuulan raadio: " + valik3;
+    vastus8.innerHTML = "Kuulan raadio: " + valik3;
     return valik3;
 }
