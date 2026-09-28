@@ -74,12 +74,16 @@ function näitaKõike() {
     let valik2 = checkboxValik();
     let tund = rangeValik();
     let stiil = selectValik();
+    let arvamus = arvamuselugemine();
+    let radiojaam = raadiojaamad();
 
     vastusKõik.innerHTML = "Sinu nimi on: " + nimi + '<br>' +
                             'Sinu lemmikud on: ' + valik2 + '<br>' +
                             'Sa kasutad ' + valik + '<br>' +
                             'Sa kuuled ' + tund + ' tundi' + '<br>' +
-                            'Sa valisid ' + stiil;
+                            'Sa valisid ' + stiil + '<br>' +
+                            'Sinu arvamus: ' + arvamus + '<br>' +
+                            'Sinu nimetatud jaamad: ' + radiojaam;
 
     function puhasta() {
         Vastus1.innerHTML = "";
@@ -87,6 +91,7 @@ function näitaKõike() {
         vastus3.innerHTML = "";
         vastus4.innerHTML = "";
         vastus5.innerHTML = "";
+        vastus6.innerHTML = "";
         vastusKõik.innerHTML = "";
     }
 }
@@ -113,4 +118,44 @@ function selectValik() {
     }
 
     return stiil.value;
+}
+
+function arvamuselugemine() {
+    let vastus6 = document.getElementById("vastus6");
+
+    let arvamus = document.getElementById("arvamus");
+
+    vastus6.innerHTML = "Teie arvamus:" + arvamus.value;
+    vastus6.style.backgroundColor = "lightgreen";
+
+    return arvamus.value;
+}
+
+function raadiojaamad() {
+    let vastus7 = document.getElementById("vastus7");
+
+    let raadiojaam = document.getElementById("raadiojaam");
+
+    vastus7.innerHTML = "Sinu nimetatud jaamad: " + raadiojaam.value;
+    vastus7.style.backgroundColor = "lightgreen";
+
+    return raadiojaam.value;
+}
+
+function KuuladRaadio() {
+    let vastus8 = document.getElementById("vastus8");
+    let kuulanRadio = document.getElementById("kuulanRadio");
+    let eiKuulanRadio = document.getElementById("eiKuulanRadio");
+
+    let valik3 = "";
+    if (kuulanRadio.checked) {
+        valik3 = kuulanRadio.value
+    } else if (kuulanRadio.checked) {
+        valik3 = eiKuulanRadio.value
+    } else {
+        "Palun tee oma valik"
+    }
+
+    Vastus8.innerHTML = "Kuulan raadio: " + valik3;
+    return valik3;
 }
