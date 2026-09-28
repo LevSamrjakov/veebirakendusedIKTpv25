@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Muusika Küsimustik</title>
     <link rel="stylesheet" href="vormStyle.css">
+    <script src = "../JavaScript/kysimustikScript.js"></script>
 </head>
 <body>
 <h1>Muusika Küsimustik</h1>
@@ -17,7 +18,10 @@
                 <label for="nimi">Nimi:</label>
             </td>
             <td>
-                <input type="text" id="nimi" placeholder="Lev">
+                <input type="text" id="nimi" placeholder="Lev" oninput="nimiLugemineKastist()">;
+            </td>
+            <td>
+                <div id="Vastus1"></div>
             </td>
         </tr>
         <tr>
@@ -26,7 +30,7 @@
                 <label for="stiil">Vali meeldivaim muusikastiil:</label>
             </td>
             <td>
-                <select name="stiil" id="stiil">
+                <select name="stiil" id="stiil" onchange="selectValik()">
                     <option value="vali">Vali...</option>
                     <option value="rock">Rock</option>
                     <option value="metal">Metal</option>
@@ -34,6 +38,9 @@
                     <option value="hardRock">Hard Rock</option>
                     <option value="neueDeutscheHärte">Neue Deutsche Härte</option>
                 </select>
+            </td>
+            <td>
+                <div id="vastus5"></div>
             </td>
         </tr>
         <tr>
@@ -44,20 +51,23 @@
                 </strong>
             </td>
             <td>
-                <input type="radio" name="platvorm" id="spotify">
+                <input type="radio" name="platvorm" id="spotify" value="spotify" onclick="radioValik()">
                 <label for="spotify">Spotify</label>
                 <br>
-                <input type="radio" name="platvorm" id="youtubeMusic">
+                <input type="radio" name="platvorm" id="youtubeMusic" value="youtubeMusic" onclick="radioValik()">
                 <label for="youtubeMusic">YouTube Music</label>
                 <br>
-                <input type="radio" name="platvorm" id="soundcloud">
+                <input type="radio" name="platvorm" id="soundcloud" value="soundcloud" onclick="radioValik()">
                 <label for="soundcloud">Soundcloud</label>
                 <br>
-                <input type="radio" name="platvorm" id="raadio">
+                <input type="radio" name="platvorm" id="raadio" value="raadio" onclick="radioValik()">
                 <label for="raadio">Raadio</label>
                 <br>
-                <input type="radio" name="platvorm" id="vinüüplaat">
+                <input type="radio" name="platvorm" id="vinüüplaat" value="vinüüplaat" onclick="radioValik()">
                 <label for="vinüüplaat">Vinüüplaat</label>
+            </td>
+            <td>
+                <div id="Vastus2"></div>
             </td>
         </tr>
         <tr>
@@ -65,22 +75,25 @@
                 <!-- checkbox -->
                 <fieldset>
                     <legend>Tee oma valikud - lemmik ansambel</legend>
-                    <input type="checkbox" name="lemmikud" id="rollingstones">
+                    <input type="checkbox" name="lemmikud" id="rollingstones" value="rolling stones" onchange="checkboxValik()">
                     <label for="rollingstones">Rolling Stones</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="judaspriest">
+                    <input type="checkbox" name="lemmikud" id="judaspriest" value="judas priest" onchange="checkboxValik()">
                     <label for="judaspriest">Judas Priest</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="manowar">
+                    <input type="checkbox" name="lemmikud" id="manowar" value="manowar" onchange="checkboxValik()">
                     <label for="manowar">Manowar</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="deepPurple">
+                    <input type="checkbox" name="lemmikud" id="deepPurple" value="deep Purple" onchange="checkboxValik()">
                     <label for="deepPurple">Deep Purple</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="rammstein">
+                    <input type="checkbox" name="lemmikud" id="rammstein" value = "rammstein" onchange="checkboxValik()">
                     <label for="rammstein">Rammstein</label>
                     <br>
                 </fieldset>
+            </td>
+            <td>
+                <div id="vastus3"></div>
             </td>
         </tr>
         <tr>
@@ -91,7 +104,10 @@
                 </label>
             </td>
             <td>
-                0<input type="range" id="tund" min="0" max="24">24
+                0<input type="range" id="tund" min="0" max="24" onchange="rangeValik()">24
+            </td>
+            <td>
+                <div id="vastus4"></div>
             </td>
             <!-- Input type: color, file, email, image,  -->
         </tr>
@@ -139,6 +155,17 @@
             </td>
             <td>
                 <input type="image" id="pilt" src="img_submit.gif" alt="Submit" width="48" height="48">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="reset" value = "Puhasta" onclick = "puhasta()">
+            </td>
+            <td>
+                <input type="button" value = "Näita/Loe andmed" onclick = "näitaKõike()">
+            </td>
+            <td>
+                <div id="vastusKõik"></div>
             </td>
         </tr>
     </table>

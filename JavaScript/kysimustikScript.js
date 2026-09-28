@@ -1,0 +1,116 @@
+function nimiLugemineKastist() {
+    let Vastus = document.getElementById("Vastus");
+
+    let nimi = document.getElementById("nimi");
+
+    Vastus1.innerHTML = "Sisestatud nimi on:" + nimi.value;
+    Vastus1.style.backgroundColor = "lightgreen";
+
+    return nimi.value;
+}
+
+//radio valikud
+function radioValik() {
+    let Vastus2 = document.getElementById("Vastus2");
+    let spotify = document.getElementById("spotify");
+    let youtubeMusic = document.getElementById("youtubeMusic");
+    let soundcloud = document.getElementById("soundcloud");
+    let raadio = document.getElementById("raadio");
+    let vinyl = document.getElementById("vinüüplaat");
+
+    let valik = "";
+    if (spotify.checked) {
+        valik = spotify.value
+    } else if (youtubeMusic.checked) {
+        valik = youtubeMusic.value
+    } else if (soundcloud.checked) {
+        valik = soundcloud.value
+    } else if (raadio.checked) {
+        valik = raadio.value
+    } else if (vinüüplaat.checked) {
+        valik = vinüüplaat.value
+    } else {
+        valik = "Palun tee oma valik"
+    }
+
+    Vastus2.innerHTML = "Valik: " + valik;
+    return valik;
+}
+
+//checkbox valik
+function checkboxValik() {
+    let vastus3 = document.getElementById("vastus3");
+    let rollingstones = document.getElementById("rollingstones");
+    let judaspriest = document.getElementById("judaspriest");
+    let manowar = document.getElementById("manowar");
+    let deepPurple = document.getElementById("deepPurple");
+    let rammstein = document.getElementById("rammstein");
+
+    let valik2="";
+    if (rollingstones.checked) {
+        valik2 += rollingstones.value +', ';
+    } if (judaspriest.checked) {
+        valik2 += judaspriest.value +', ';
+    } if (manowar.checked) {
+        valik2 += manowar.value +', ';
+    } if (deepPurple.checked) {
+        valik2 += deepPurple.value +', ';
+    } if (rammstein.checked) {
+        valik2 += rammstein.value +', ';
+    } if (valik2.checked) {
+        valik2 += valik2.value +', ';
+    }
+
+    vastus3.innerHTML = "Sinu lemmikud on: " + valik2;
+    vastus3.style.backgroundColor = "lightgreen";
+    return valik2;
+}
+
+//Kasutab teisi funktsioone
+function näitaKõike() {
+    let vastusKõik = document.getElementById("vastusKõik");
+    let nimi = nimiLugemineKastist();
+    let valik = radioValik();
+    let valik2 = checkboxValik();
+    let tund = rangeValik();
+    let stiil = selectValik();
+
+    vastusKõik.innerHTML = "Sinu nimi on: " + nimi + '<br>' +
+                            'Sinu lemmikud on: ' + valik2 + '<br>' +
+                            'Sa kasutad ' + valik + '<br>' +
+                            'Sa kuuled ' + tund + ' tundi' + '<br>' +
+                            'Sa valisid ' + stiil;
+
+    function puhasta() {
+        Vastus1.innerHTML = "";
+        Vastus2.innerHTML = "";
+        vastus3.innerHTML = "";
+        vastus4.innerHTML = "";
+        vastus5.innerHTML = "";
+        vastusKõik.innerHTML = "";
+    }
+}
+
+//range
+function rangeValik() {
+    let vastus4 = document.getElementById("vastus4");
+    let tund = document.getElementById("tund");
+
+    vastus4.innerHTML = "Sa kuuled muusikat: " + tund.value + " tundi.";
+    return tund.value;
+}
+
+//Select valik
+function selectValik() {
+    let vastus5 = document.getElementById("vastus5");
+    let stiil = document.getElementById("stiil");
+
+    //0 - 1. rida loetelus
+    if(stiil.selectedIndex !== 0) {
+        vastus5.innerHTML = "Sa valisid " + stiil.value;
+    } else {
+        vastus5.innerHTML = "Palun tee oma valik: ";
+    }
+
+    return stiil.value;
+}
