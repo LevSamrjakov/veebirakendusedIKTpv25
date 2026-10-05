@@ -1,0 +1,44 @@
+form{
+    text-align: left;
+    color: white;
+}
+
+table{
+    border: 3px solid cyan;
+    border-collapse: collapse;
+    padding: 1%;
+    width: 50%;
+    background-color: black;
+}
+
+td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 40%;
+    padding: 1%;;
+    background-color: black;
+}
+
+input:hover{
+    background-color: cyan;
+    color: white;
+    font-weight: bold;
+}
+
+input{
+    border: 1px solid cyan;
+    border-radius: 4px;
+    padding: 1%;
+}
+
+input[type=checkbox]+label{
+    background-color: black;
+    font-size: 10pt;
+    padding: 5px;
+    width: 60px;
+    height: 20px;
+    border: 1px solid cyan;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 40px;
+}
