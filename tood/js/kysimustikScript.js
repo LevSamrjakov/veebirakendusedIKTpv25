@@ -17,18 +17,24 @@ function radioValik() {
     let soundcloud = document.getElementById("soundcloud");
     let raadio = document.getElementById("raadio");
     let vinyl = document.getElementById("vinüüplaat");
+    let pilt = document.getElementById("piltLogo");
 
     let valik = "";
     if (spotify.checked) {
         valik = spotify.value
+        pilt.src = "../images/spotifyLogo.png"
     } else if (youtubeMusic.checked) {
         valik = youtubeMusic.value
+        pilt.src = "../images/youtubeMsuicLogo.png"
     } else if (soundcloud.checked) {
         valik = soundcloud.value
+        pilt.src = "../images/soundcloudLogo.png"
     } else if (raadio.checked) {
         valik = raadio.value
+        pilt.src = "../images/raadio.png"
     } else if (vinüüplaat.checked) {
         valik = vinüüplaat.value
+        pilt.src = "../images/vinuplaat.png"
     } else {
         valik = "Palun tee oma valik"
     }
@@ -161,3 +167,4 @@ function KuuladRaadio() {
     vastus8.innerHTML = "Kuulan raadio: " + valik3;
     return valik3;
 }
+
