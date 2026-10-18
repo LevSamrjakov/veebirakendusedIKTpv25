@@ -18,7 +18,32 @@ section#kalk2{
     padding: 1px;
 }
 
+section#kalk3{
+    border: 1pt solid grey;
+    border-radius: 10px;
+    width: 30%;
+    padding: 1px;
+}
+
 img#vastusepilt{
     height: 100px;
     width: 100px;
+}
+
+img#vastusepilt2{
+    height: 100px;
+    width: 100px;
+}
+
+img#vastusepilt3 {
+    height: 150px;
+    width: 100px;
+}
+
+div.kujundiValik {
+    display: none;
+    border: 1pt solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
 }

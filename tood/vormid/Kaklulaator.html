@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="kalkStyle.css">
   <script src="../js/kalk1Script.js"></script>
   <script src="../js/kalk2Script.js"></script>
+  <script src="../js/kalk3Script.js"></script>
 </head>
 <body>
 <h1>Kalkulaatorid</h1>
@@ -41,7 +42,51 @@
     <div id="vastus2"></div>
     <img src="" alt="" id="vastusepilt2">
   </section>
-  <section id="kalk3">Kalk3</section>
+  <section id="kalk3">
+    <h2>Pindala kalkulaator</h2>
+    <p>Vali kujund:</p>
+    <input type="radio" name="valik3" id="ruut" value="ruut" onchange="kujundiValik()">
+    <label for="ruut">Ruut</label>
+    <br>
+    <input type="radio" name="valik3" id="ristkulik" value="ristkulik" onchange="kujundiValik()">
+    <label for="ristkulik">Ristkülik</label>
+    <br>
+    <input type="radio" name="valik3" id="ring" value="ring" onchange="kujundiValik()">
+    <label for="ring">Ring</label>
+    <br>
+    <input type="radio" name="valik3" id="kolmnurk" value="kolmnurk" onchange="kujundiValik()">
+    <label for="kolmnurk">Kolmnurk</label>
+    <br>
+    <p>Sisesta väärtused:</p>
+    <div id="ruutInput" class="kujundiValik">
+      <label for="ruutKulg">Külje pikkus (cm):</label>
+      <input type="number" id="ruutKulg" min="1" step="any">
+    </div>
+    <div id="ristkulikInput" class="kujundiValik">
+      <label for="pikkus">Pikkus (cm):</label>
+      <input type="number" id="pikkus" min="1" step="any">
+      <br>
+      <label for="laius">Laius (cm):</label>
+      <input type="number" id="laius" min="1" step="any">
+    </div>
+    <div id="ringInput" class="kujundiValik">
+      <label for="raadius">Raadius (cm):</label>
+      <input type="number" id="raadius" min="1" step="any">
+    </div>
+    <div id="kolmnurkInput" class="kujundiValik">
+      <label for="alus">Alus (cm):</label>
+      <input type="number" id="alus" min="1" step="any">
+      <br>
+      <label for="korgus">Kõrgus (cm):</label>
+      <input type="number" id="korgus" min="1" step="any">
+    </div>
+    <br>
+    <button type="button" onclick="pindalaArvutamine()">
+      Arvuta pindala
+    </button>
+    <div id="vastus3"></div>
+    <img src="" alt="Valitud kujund" id="vastusepilt3">
+  </section>
 </section>
 </body>
 </html>
