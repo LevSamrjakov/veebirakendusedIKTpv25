@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+.Raamat {
+    background-color: dimgray;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.Raamat h3 {
+    color: goldenrod;
+}
