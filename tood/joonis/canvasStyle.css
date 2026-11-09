@@ -1,0 +1,11 @@
+canvas#canvas {
+    background-color: darkolivegreen;
+    border: 1px solid #4B5320;
+    border-radius: 5px;
+}
+
+table{
+    position: absolute;
+    left: 320pt;
+    top: 60pt;
+}
