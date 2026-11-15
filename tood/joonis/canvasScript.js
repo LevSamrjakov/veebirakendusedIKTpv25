@@ -161,11 +161,19 @@ function kere() {
         tx.fillStyle = 'darkred';
         tx.fillRect(180, 165, 60, 60);
     }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'darkred';
+        tx.fillRect(240, 210, 40, 15);
+    }
+}
+
+function aknad() {
+    const canvas = document.getElementById('canvas');
     if(canvas.getContext){
         let tx = canvas.getContext('2d'); // 2d tasand
         tx.beginPath();
         tx.fillStyle = 'lightblue';
-        tx.lineWidth = 3;
         tx.moveTo(240, 165);
         tx.lineTo(240, 225);
         tx.lineTo(280, 225);
@@ -176,5 +184,89 @@ function kere() {
         let tx = canvas.getContext('2d'); // 2d tasand
         tx.fillStyle = 'darkred';
         tx.fillRect(240, 210, 40, 15);
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'maroon';
+        tx.fillRect(185, 172.5, 50, 30);
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'lightblue';
+        tx.fillRect(187.5, 175, 45, 25);
+    }
+}
+
+function tuled() {
+    const canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d');
+        tx.beginPath();
+        tx.fillStyle = 'lightgray';
+        tx.arc(360, 250, 12.5, 0, 2*Math.PI, true); // x, y -keskpunkt, R - raadius
+        tx.fill();
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'goldenrod';
+        tx.fillRect(360, 238, 12.5, 25);
+    }
+    if(canvas.getContext){
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.beginPath();
+        tx.fillStyle = 'goldenrod';
+        tx.moveTo(500, 215);
+        tx.lineTo(360, 250);
+        tx.lineTo(500, 285);
+        tx.closePath();
+        tx.fill();
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d');
+        tx.beginPath();
+        tx.fillStyle = 'lightgray';
+        tx.arc(40, 250, 12.5, 0, 2*Math.PI, true); // x, y -keskpunkt, R - raadius
+        tx.fill();
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'red';
+        tx.fillRect(27.5, 238, 12.5, 25);
+    }
+}
+
+function katusetuled() {
+    const canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d');
+        tx.beginPath();
+        tx.fillStyle = 'lightgray';
+        tx.arc(230, 150, 12.5, 0, 2*Math.PI, true); // x, y -keskpunkt, R - raadius
+        tx.fill();
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'lightgray';
+        tx.fillRect(235, 150, 7.5, 15);
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'lightgray';
+        tx.fillRect(217.5, 150, 7.5, 15);
+    }
+    if (canvas.getContext) {
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.fillStyle = 'goldenrod';
+        tx.fillRect(230, 138, 12.5, 25);
+    }
+    if(canvas.getContext){
+        let tx = canvas.getContext('2d'); // 2d tasand
+        tx.beginPath();
+        tx.fillStyle = 'goldenrod';
+        tx.moveTo(500, 115);
+        tx.lineTo(230, 150);
+        tx.lineTo(500, 185);
+        tx.closePath();
+        tx.fill();
     }
 }
