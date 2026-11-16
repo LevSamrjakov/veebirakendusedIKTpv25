@@ -5,8 +5,39 @@
     <meta charset="UTF-8">
     <title>Õpilane Lev Samrjakov veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+            integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+            crossorigin="anonymous"></script>
+    <script>
+        function start(){
+            $('#querypilt').draggable(); // Lohistada hiirega veebilehel
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#kuva').hide();
+            //nupu peida vajutamine
+            $('#peida').click(function() {
+                $('#kast1').hide(500);
+                $('#kast2').hide(500);
+                $(this).hide();
+                $('#kuva').show();
+            });
+            //nupu kuva vajutamine
+            $('#kuva').click(function() {
+                $('#kast1').show(500);
+                $('#kast2').show(500);
+                $(this).hide();
+                $('#peida').show();
+            });
+        });
+    </script>
 </head>
-<body>
+<body onload = "start()">
 <!--Veebilehe sisu-->
 <!--Päis-->
 <header>
@@ -36,6 +67,27 @@
 </nav>
 <!--Põhisisu-->
 <main>
+    <input type="button" value="Kast 1 ===>" id="paremale"
+           onclick="$('#kast1').animate({left: '1390px'}, 1000);
+    $(this).hide();
+    $('#vasakule').show();">
+    <input type="button" value="<=== Kast 1" id="vasakule" style="display:none"
+           onclick="$('#kast1').animate({left: '0'}, 1000);
+    $(this).hide();
+    $('#paremale').show();">
+
+    <input type="button" value="Kast 2 ===>" id="paremale2"
+           onclick="$('#kast2').animate({left: '1390px'}, 1000);
+    $(this).hide();
+    $('#vasakule2').show();">
+    <input type="button" value="<=== Kast 2" id="vasakule2" style="display:none"
+           onclick="$('#kast2').animate({left: '0'}, 1000);
+    $(this).hide();
+    $('#paremale2').show();">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
+
     <section id="kast1">
         <h2>
             Tere tulemast!
@@ -45,8 +97,16 @@
     </section>
     <section id="kast2">
         <h3>Põnev pilt</h3>
-        <div>
+        <section id="querypilt">
             <img src="img.png" alt="See on ise tehtud pilt" id="protosslogo">
+        </section>
+    </section>
+    <section id="selgitus">
+        <h2>JQuery'ga on tehtud:</h2>
+        <div>
+            Draggable pilt
+            2 nuppud mis muudab kahte sektsiooni eraldi liigutada
+            Peidama ja kuvama sectionid Kast1 ja Kast2
         </div>
     </section>
 </main>

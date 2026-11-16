@@ -108,3 +108,10 @@ nav{
 main{
     margin-top: 20px;
 }
+
+querypilt{
+    position: relative;
+    left: 0;
+    width: 400px;
+    height: 400px;
+}
